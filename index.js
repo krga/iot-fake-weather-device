@@ -10,6 +10,8 @@ const app = express();
 const mqttClient = mqtt.connect('mqtt://localhost');
 const mqttTopic = 'dev1/envdata';
 
+const port = process.env.PORT || 3001;
+
 const openweathermapApiKey = process.env.OWMAPIKEY || 'xxxxxxxxxxxxx';
 const openweathermapLocation = 'Zurich';
 
@@ -35,6 +37,6 @@ app.get('/', function (req, res) {
   });
 })
 
-app.listen(3001, function () {
-  console.log('listening on port 3001!')
+app.listen(port, function () {
+  console.log('listening on port: '+port)
 })
