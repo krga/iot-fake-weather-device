@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config();
 
 const express = require('express');
 const request = require('request');
@@ -29,8 +29,8 @@ app.get('/', function (req, res) {
       } else {
         let id = crypto.randomBytes(3).toString('hex');
         let weatherText = `It's ${weather.main.temp} degrees in ${weather.name}!`;
-        let mqttPayload = '{"source": "fakedevice-'+id+'", "temp": '+weather.main.temp+', "hum": '+weather.main.humidity+', "light": '+100+'}'
-        mqttClient.publish(mqttTopic, mqttPayload)
+        let mqttPayload = '{"source": "fakedevice-'+id+'", "temp": '+weather.main.temp+', "hum": '+weather.main.humidity+', "light": '+100+'}';
+        mqttClient.publish(mqttTopic, mqttPayload);
         res.send("Getting weather data:"+weatherText+"<br>sending JSON to mqtt broker: "+mqttPayload);
       }
     }
