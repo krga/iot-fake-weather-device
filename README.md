@@ -4,11 +4,12 @@ A simple IoT fake device which provides temprature, humidity and light data by o
 
 ## Getting Started
 
-Provide a valid openweathermap API key in the .env file where you can also define the port the app is listening
+Provide a valid openweathermap API key in the .env file where you can also define the desired location and the port the app is listening
 
 ```
 OWMAPIKEY='your api key here'
 PORT=3001
+LOCATION='Zurich'
 ```
 
 Open the URL with the respective port of the app with the browser to trigger the MQTT message:
