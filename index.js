@@ -13,7 +13,7 @@ const mqttTopic = 'dev1/envdata';
 const port = process.env.PORT || 3001;
 
 const openweathermapApiKey = process.env.OWMAPIKEY || 'xxxxxxxxxxxxx';
-const openweathermapLocation = 'Zurich';
+const openweathermapLocation = process.env.LOCATION || 'New York';
 
 app.get('/', function (req, res) {
   

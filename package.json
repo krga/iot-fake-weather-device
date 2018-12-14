@@ -1,7 +1,7 @@
 {
   "name": "iot-fake-weather-device",
   "version": "1.0.0",
-  "description": "A simple IOT fake device which provides temprature, humidity and light data by obtaining this data from the openweathermap api and sending it to an MQTT broker",
+  "description": "A simple IoT fake device which provides temprature, humidity and light data by obtaining this data from the openweathermap api and sending it to an MQTT broker",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
